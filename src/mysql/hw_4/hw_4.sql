@@ -31,8 +31,16 @@ GROUP BY categories.name
 -- соответствующее название региона (name) из таблицы areas.
 -- Связь: cities.area_id = areas.id.
 
-SELECT сities.name FROM cities INNER JOIN areas ON cities.area_id = areas.id
+SELECT сities.name, areas.name
+FROM cities 
+INNER JOIN areas 
+ON cities.area_id = areas.id
 
 -- 5. Выбрать название школы (name) из таблицы schools и
 -- соответствующее название региона (name) из таблицы districts.
 -- Связь: schools.district_id = districts.id.
+
+SELECT schools.name, districts.name
+FROM schools 
+INNER JOIN districts 
+ON schools.district_id = districts.id
