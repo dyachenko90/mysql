@@ -5,7 +5,8 @@
 SELECT genres.name 
 FROM genres 
 INNER JOIN books 
-ON books.genre_id != genres.id
+ON books.genre_id = genres.id
+WHERE books.name IS NULL;
 
 -- 2. Выбрать фамилию surname пользователя и имя name из таблицы
 -- users и соответствующее название региона (поле name) из
